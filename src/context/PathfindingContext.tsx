@@ -18,6 +18,7 @@ interface PathfindingContextInterface {
 
 export const PathfindingContext = createContext<PathfindingContextInterface | undefined>(undefined);
 
+//make a hook, costum react hook, and provide access to pathfinding context, ensure the hook is used within the provider
 export const PathfindingProvider = ({ children }: { children: React.ReactNode }) => {
   const [algorithm, setAlgorithm] = useState<AlgorithmType>("DIJKSTRA");
   const [maze, setMaze] = useState<MazeType>("NONE");
